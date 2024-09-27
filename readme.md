@@ -1,23 +1,27 @@
 Pin Connections:
-LM393 Sensor (Digital)
 
-Signal Pin (Out): Connect to GPIO 2 on the ESP32 (LDRPIN)
-VCC: Connect to 3.3V on the ESP32
-GND: Connect to GND on the ESP32
-IR Obstacle Sensor (Digital)
 
-Signal Pin (Out): Connect to GPIO 34 on the ESP32 (IRPIN)
-VCC: Connect to 3.3V on the ESP32
-GND: Connect to GND on the ESP32
-MPU6050 (I2C Communication)
+1)Connections for the MPU6050 (I2C communication):
 
-SDA: Connect to GPIO 21 (SDA) on the ESP32
-SCL: Connect to GPIO 22 (SCL) on the ESP32
-VCC: Connect to 3.3V on the ESP32
-GND: Connect to GND on the ESP32
-ESP32 Pin Assignments in Code:
-LM393 Sensor Pin (LDRPIN): GPIO 2
-IR Sensor Pin (IRPIN): GPIO 34
-MPU6050 I2C Pins:
-SDA: GPIO 21
-SCL: GPIO 22
+Place the MPU6050 on the breadboard so that it straddles the middle gap.
+Using jumper wires, make the following connections:
+VCC → Red power rail (3.3V)
+GND → Blue ground rail (GND)
+SCL → GPIO 22 (Connect SCL pin of MPU6050 to GPIO 22 on the ESP32 using a jumper wire)
+SDA → GPIO 21 (Connect SDA pin of MPU6050 to GPIO 21 on the ESP32 using a jumper wire)
+
+
+2) Connections for the IR Obstacle Sensor (Analog Output):
+Place the IR sensor on the breadboard.
+Using jumper wires, connect:
+VCC → Red power rail (3.3V)
+GND → Blue ground rail (GND)
+OUT → GPIO 34 (Connect the OUT pin of the IR sensor to GPIO 34 on the ESP32 for analog reading)
+
+
+3) Connections for the LM393 Sensor (Digital Output):
+Place the LM393 sensor on the breadboard.
+Using jumper wires, connect:
+VCC → Red power rail (3.3V)
+GND → Blue ground rail (GND)
+OUT → GPIO 2 (Connect the OUT pin of the LM393 sensor to GPIO 2 on the ESP32 for digital reading)

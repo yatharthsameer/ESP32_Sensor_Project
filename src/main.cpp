@@ -34,9 +34,9 @@ void setup()
   Serial.println("Timestamp,LM393,IR Sensor,MPU6050_X,MPU6050_Y,MPU6050_Z");
 
   // Uncomment the following lines to enable LM393 sensor
-  /*
+
   pinMode(LDRPIN, INPUT);  // LM393 sensor input
-  */
+
 
   // Uncomment the following lines to enable IR sensor
   
@@ -53,11 +53,11 @@ void loop()
   Serial.print(timestamp);
 
   // Uncomment the following block to enable LM393 sensor reading
-  /*
+
   int lm393Val = digitalRead(LDRPIN);
   Serial.print(",");
   Serial.print(lm393Val);
-  */
+  
 
   // Uncomment the following block to enable IR sensor reading
   
